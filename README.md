@@ -1,5 +1,6 @@
-<h1 align="center">esp32_basic_synth</h1>
+<h1 align="center">forked esp32_basic_synth</h1>
 <h3 align="center">ESP32 based DIY polyphonic MIDI synthesizer module Arduino project</h3>  
+<h3 align="center">Forked for my personal Sinterklaas project</h3>  
 <p align="center"> 
   <img src="img/splash.jpg" alt="project picture" width="480px" height="270px"><br>
   <a href="https://youtu.be/5XVK5MOKmZw">link to the video</a>
