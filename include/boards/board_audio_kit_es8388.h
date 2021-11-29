@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * Dieses Programm ist Freie Software: Sie können es unter den Bedingungen
+ * Dieses Programm ist Freie Software: Sie kï¿½nnen es unter den Bedingungen
  * der GNU General Public License, wie von der Free Software Foundation,
  * Version 3 der Lizenz oder (nach Ihrer Wahl) jeder neueren
- * veröffentlichten Version, weiter verteilen und/oder modifizieren.
+ * verï¿½ffentlichten Version, weiter verteilen und/oder modifizieren.
  *
- * Dieses Programm wird in der Hoffnung bereitgestellt, dass es nützlich sein wird, jedoch
- * OHNE JEDE GEWÄHR,; sogar ohne die implizite
- * Gewähr der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
- * Siehe die GNU General Public License für weitere Einzelheiten.
+ * Dieses Programm wird in der Hoffnung bereitgestellt, dass es nï¿½tzlich sein wird, jedoch
+ * OHNE JEDE GEWï¿½HR,; sogar ohne die implizite
+ * Gewï¿½hr der MARKTFï¿½HIGKEIT oder EIGNUNG Fï¿½R EINEN BESTIMMTEN ZWECK.
+ * Siehe die GNU General Public License fï¿½r weitere Einzelheiten.
  *
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <https://www.gnu.org/licenses/>.
@@ -44,7 +44,7 @@
  *
  * Tested configuration: I2C: 1, I2S: 4
  */
-
+#include "config.h"
 
 #ifndef BOARDS_BOARD_AUDIO_KIT_ES8388_H_
 #define BOARDS_BOARD_AUDIO_KIT_ES8388_H_
@@ -55,13 +55,18 @@
 
 
 /* on board led */
-#define BLINK_LED_PIN     19 // IO19 -> D5
+#define BLINK_LED_PIN     19 // D5
+#define BLINK_LED_PIN2    22 // D4
+
+/* Headphone detection and power amp */
+#define GPIO_HP_DETECT    GPIO_NUM_39  // Could not get stable reading... only low for fraction of second when plugging in.
+#define GPIO_PA_EN        GPIO_NUM_21
 
 
 //#define MIDI_RX_PIN 22 /* U2RRXD */
 //#define MIDI_RX_PIN 19
-#define MIDI_RX_PIN 23 /* D5 LED will blink then */
-#define LED_STRIP_PIN         12
+//#define MIDI_RX_PIN 23 /* D5 LED will blink then */
+//#define LED_STRIP_PIN         12  // Not used
 
 #if ES8388_CFG_I2C==1
 #define ES8388_PIN_SDA  18

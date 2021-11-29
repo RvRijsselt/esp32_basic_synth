@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * Dieses Programm ist Freie Software: Sie können es unter den Bedingungen
+ * Dieses Programm ist Freie Software: Sie kï¿½nnen es unter den Bedingungen
  * der GNU General Public License, wie von der Free Software Foundation,
  * Version 3 der Lizenz oder (nach Ihrer Wahl) jeder neueren
- * veröffentlichten Version, weiter verteilen und/oder modifizieren.
+ * verï¿½ffentlichten Version, weiter verteilen und/oder modifizieren.
  *
- * Dieses Programm wird in der Hoffnung bereitgestellt, dass es nützlich sein wird, jedoch
- * OHNE JEDE GEWÄHR,; sogar ohne die implizite
- * Gewähr der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
- * Siehe die GNU General Public License für weitere Einzelheiten.
+ * Dieses Programm wird in der Hoffnung bereitgestellt, dass es nï¿½tzlich sein wird, jedoch
+ * OHNE JEDE GEWï¿½HR,; sogar ohne die implizite
+ * Gewï¿½hr der MARKTFï¿½HIGKEIT oder EIGNUNG Fï¿½R EINEN BESTIMMTEN ZWECK.
+ * Siehe die GNU General Public License fï¿½r weitere Einzelheiten.
  *
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <https://www.gnu.org/licenses/>.
@@ -47,9 +47,9 @@
 #define CONFIG_H_
 
 
-#define BOARD_ML_V1 /* activate this when using the ML PCB V1 */
+//#define BOARD_ML_V1 /* activate this when using the ML PCB V1 */
 //#define BOARD_ESP32_AUDIO_KIT_AC101 /* activate this when using the ESP32 Audio Kit v2.2 with the AC101 codec */
-//#define BOARD_ESP32_AUDIO_KIT_ES8388 /* activate this when using the ESP32 Audio Kit v2.2 with the ES8388 codec */
+#define BOARD_ESP32_AUDIO_KIT_ES8388 /* activate this when using the ESP32 Audio Kit v2.2 with the ES8388 codec */
 //#define BOARD_ESP32_DOIT /* activate this when using the DOIT ESP32 DEVKIT V1 board */
 
 /* can be used to pass line in through audio processing to output */
@@ -66,7 +66,7 @@
  * you could use for example https://projectgus.github.io/hairless-midiserial/
  * to connect your MIDI device via computer to the serial port
  */
-#define MIDI_RECV_FROM_SERIAL
+//#define MIDI_RECV_FROM_SERIAL
 
 /* activate MIDI via USB */
 //#define MIDI_VIA_USB_ENABLED
