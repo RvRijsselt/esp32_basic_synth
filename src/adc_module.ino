@@ -23,6 +23,8 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+#include "config.h"
+
 #ifdef __CDT_PARSER__
 #include <cdt.h>
 #endif

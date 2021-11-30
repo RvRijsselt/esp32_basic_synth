@@ -41,6 +41,7 @@
  * @see ESP32 Arduino DIY Synthesizer Projects - Little startup guide to get your MIDI synth working - https://youtu.be/ZNxGCB-d68g
  */
 
+#include "config.h"
 
 #ifdef __CDT_PARSER__
 #include <cdt.h>

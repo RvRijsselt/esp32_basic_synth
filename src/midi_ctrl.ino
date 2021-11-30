@@ -38,6 +38,7 @@
  * @see https://youtu.be/o-XjbrZHfWA
  */
 
+#include "config.h"
 
 #ifdef __CDT_PARSER__
 #include <cdt.h>
