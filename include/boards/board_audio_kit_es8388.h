@@ -60,18 +60,18 @@
 
 
 /* on board led */
-#define BLINK_LED_PIN     19                // D5
-#define BLINK_LED_PIN2    22                // D4
+#define BLINK_LED_PIN     22                // D4
+#define BLINK_LED_PIN2    19                // D5
 
 /* headphone detection and power amp */
 #define GPIO_HP_DETECT    GPIO_NUM_39       /* only low for fraction of second when plugging in */
 #define GPIO_PA_EN        GPIO_NUM_21
 
 /* on board keys */
-#define PIN_KEY_ANALOG              (36)    /* 0 or 4096... not analog? */
+#define PIN_KEY_ANALOG              (36)    /* need to do some resoldering first */
 #define PIN_KEY_1                   (36)    
 #define PIN_KEY_2                   (13)
-#define PIN_KEY_3                   (19)
+#define PIN_KEY_3                   (19)    /* same as led 5 */
 #define PIN_KEY_4                   (23)    /* i2c port, dont use! */
 #define PIN_KEY_5                   (18)    /* i2c port, dont use! */
 #define PIN_KEY_6                   (5)     /* i2s port, dont use! */
