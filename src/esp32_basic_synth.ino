@@ -142,6 +142,8 @@ void setup()
     pinMode(GPIO_PA_EN, OUTPUT);
     digitalWrite(GPIO_PA_EN, HIGH);
 
+    
+
     pinMode(PIN_KEY_1, INPUT_PULLUP);
     pinMode(PIN_KEY_2, INPUT_PULLUP);
     pinMode(PIN_KEY_3, INPUT_PULLUP);
@@ -214,6 +216,9 @@ void Core0TaskLoop()
     auto adc1 = roundf(ads.readADC_SingleEnded(1) * VPS, 2);
     auto adc2 = roundf(ads.readADC_SingleEnded(2) * VPS, 2);
     auto adc3 = roundf(ads.readADC_SingleEnded(3) * VPS, 2);
+
+    auto val = analogRead(PIN_KEY_ANALOG);
+    Serial.printf("analog: %d", val);
 
     if (adc0 != last0 || adc1 != last1 || adc2 != last2 || adc3 != last3) {
         Serial.printf("ADC: %f, %f, %f, %f\n", adc0, adc1, adc2, adc3);
@@ -298,25 +303,25 @@ inline void Loop_1Hz(void)
     Blink_Process();
 #endif
 
-    Midi_NoteOff(0, 64);
-    Midi_NoteOff(0, 74);
-    Midi_NoteOff(0, 84);
-    Midi_NoteOff(0, 94);
-    Midi_NoteOff(0, 104);
-    Midi_NoteOff(0, 114);
+    //Midi_NoteOff(0, 64);
+    //Midi_NoteOff(0, 74);
+    //Midi_NoteOff(0, 84);
+    //Midi_NoteOff(0, 94);
+    //Midi_NoteOff(0, 104);
+    //Midi_NoteOff(0, 114);
 
-    if (digitalRead(PIN_KEY_1) == LOW) {
-        Serial.println("Key 1");
-        Midi_NoteOn(0, 64, 64);
-    }
-    if (digitalRead(PIN_KEY_2) == LOW) {
-        Serial.println("Key 2");
-        Midi_NoteOn(0, 74, 64);
-    }
-    if (digitalRead(PIN_KEY_3) == LOW) {
-        Serial.println("Key 3");
-        Midi_NoteOn(0, 84, 64);
-    }
+    //if (digitalRead(PIN_KEY_1) == LOW) {
+    //    Serial.println("Key 1");
+    //    Midi_NoteOn(0, 64, 64);
+    //}
+    //if (digitalRead(PIN_KEY_2) == LOW) {
+    //    Serial.println("Key 2");
+    //    Midi_NoteOn(0, 74, 64);
+    //}
+    //if (digitalRead(PIN_KEY_3) == LOW) {
+    //    Serial.println("Key 3");
+    //    Midi_NoteOn(0, 84, 64);
+    //}
     //if (digitalRead(PIN_KEY_4) == LOW) {
     //    Serial.println("Key 4");
     //    Midi_NoteOn(0, 94, 64);
